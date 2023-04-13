@@ -4,6 +4,7 @@
 # all import goes here 
 import requests 
 import argparse
+from pprint import pprint
 import time 
 import json 
 # initilize the parser 
@@ -42,10 +43,10 @@ if(args.file != None):
                     with open(args.output,"a") as o_file:
                         o_file.write(json.dumps(json_data))
                         o_file.write("\n")
-                        print(json_data)
+                        pprint(json_data)
                 else:
                     #simply print the output
-                    print(json_data)
+                    pprint(json_data)
 else:
     print("\033[31;1m input file is not defined ")
 
