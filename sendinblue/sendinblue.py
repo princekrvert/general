@@ -3,6 +3,7 @@ import time
 import sib_api_v3_sdk
 from sib_api_v3_sdk.rest import ApiException
 from pprint import pprint
+# note you need to import to the sib_api_v3_sdk to install this exeute the cmd pip install sib_api_v3_sdk or pip3 install sib_api_v3_sdk
 
 configuration = sib_api_v3_sdk.Configuration()
 configuration.api_key['api-key'] = 'your_api_here'
