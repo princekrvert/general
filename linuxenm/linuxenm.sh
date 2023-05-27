@@ -29,4 +29,15 @@ else
         echo ""
 
 fi
-# now add the mote feture too this script...
+#Which program is installed to download remote file check wget,nc,natcat
+check_prog_down(){
+        command -v wget 2>&1 > /dev/null && echo -e "\033[0;1m Wget is installed " || { echo -e "\033[32;1m Wget is not installed" ; }
+        command -v natcat 2>&1 /dev/null && echo -e "\033[0;1m natcat is installed" || { echo -e "\033[32;1m natcat is not installed ";}
+}
+check_prog_down
+# check services running as root
+service_as_root(){
+echo -e "\033[34;1m These services are runnig as root"
+ps aux | grep "root"
+}
+service_as_root
